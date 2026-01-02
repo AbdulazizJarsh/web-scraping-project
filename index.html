@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Page Navigation</title>
+</head>
+<body>
+
+  <h1 class="title">Page Navigation Type</h1>
+
+  <div class="button-group">
+    <button class="btn btn-outline-dark" onclick="selectPageType('article')">
+      Article Page
+    </button>
+
+    <button class="btn btn-outline-dark" onclick="selectPageType('product')">
+      Product Page
+    </button>
+
+    <button class="btn btn-outline-dark" onclick="selectPageType('listing')">
+      Listing Page
+    </button>
+  </div>
+
+  <input
+    type="text"
+    id="urlInput"
+    class="form-control"
+    placeholder="Paste article URL here"
+  />
+
+  <div id="selectedType" class="mt-2" aria-live="polite"></div>
+
+  <div class="center">
+    <button class="btn btn-outline-dark" onclick="startScraping()">Start</button>
+  </div>
+
+  <div id="result" class="result-box mt-4" style="display:none;">
+    <h2 id="articleTitle"></h2>
+    <div id="articleContent"></div>
+  </div>
+
+  <div id="output"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
